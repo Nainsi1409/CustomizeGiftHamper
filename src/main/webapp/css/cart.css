@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.cart-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    animation: pop-in 0.7s ease-in-out;
+}
+
+.cart-heading {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+    animation: slide-in 1s ease-in-out;
+}
+
+/* Table Styling */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    animation: table-fade-in 1s ease-in-out;
+}
+
+.cart-table thead th {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    animation: fadeIn 1.5s;
+}
+
+.cart-table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    animation: row-slide 1s ease-in-out;
+}
+
+.cart-table tbody tr:hover {
+    background: #f9f9f9;
+    transition: background 0.3s ease;
+}
+
+.cart-table .empty-cart {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+/* Summary and Buttons */
+.cart-summary {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-summary h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    animation: bounce 1.5s infinite;
+}
+
+.cart-summary .total-amount {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Remove Button */
+.remove-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.remove-btn:hover {
+    background: #a71d2a;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes table-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes row-slide {
+    from {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pop-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .cart-table tbody td {
+        font-size: 14px;
+    }
+
+    .checkout-btn, .remove-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
